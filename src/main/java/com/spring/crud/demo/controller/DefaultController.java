@@ -11,21 +11,16 @@ import java.net.URI;
 @RestController
 public class DefaultController {
 
-
     @Operation(summary = "Swagger documentation url", hidden = true)
     @GetMapping
-    ResponseEntity<Void> redirect() {
-        return ResponseEntity.status(HttpStatus.FOUND)
-                .location(URI.create("swagger-ui-custom.html"))
-                .build();
+    public ResponseEntity<Void> redirect() {
+        return ResponseEntity.status(HttpStatus.FOUND).location(URI.create("swagger-ui-custom.html")).build();
     }
 
     @Operation(summary = "Database url", hidden = true)
     @GetMapping("/database")
     public ResponseEntity<Void> databaseUrl() {
-        return ResponseEntity.status(HttpStatus.FOUND)
-                .location(URI.create("h2-console"))
-                .build();
+        return ResponseEntity.status(HttpStatus.FOUND).location(URI.create("h2-console")).build();
 
     }
 

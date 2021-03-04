@@ -402,3 +402,8 @@ Or
     }
     ``` 
 
+
+
+*** Swagger doc ***
+
+http://localhost:8088/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config

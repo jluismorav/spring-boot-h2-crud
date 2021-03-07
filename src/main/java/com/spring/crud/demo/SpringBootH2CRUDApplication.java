@@ -80,6 +80,8 @@ public class SpringBootH2CRUDApplication {
 				log.info("******* Employees stored in DB Size :: {}", employees.size());
 				log.info("******* Employees stored in DB :: {}", employees);
 			}
+
+			log.error("prueba", new Throwable("aja"));
 		};
 	}
 

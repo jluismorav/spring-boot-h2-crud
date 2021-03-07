@@ -22,19 +22,11 @@ ENV maven.home $M2_HOME
 ENV M2 $M2_HOME/bin
 ENV PATH $M2:$PATH
 
-RUN curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.7.0-x86_64.rpm
-RUN rpm -vi filebeat-7.7.0-x86_64.rpm
-RUN filebeat modules enable system
-RUN chmod go-w /etc/filebeat/filebeat.yml
-
-RUN systemctl enable filebeat
-
 RUN cd home
 RUN mkdir -p /spring-boot-h2-crud
 
-WORKDIR /spring-boot-h2-crud
+WORKDIR /home/spring-boot-h2-crud
 
 COPY . .
-
 
 

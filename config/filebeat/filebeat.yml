@@ -12,18 +12,20 @@ filebeat.inputs:
   - type: log
     enabled: true
     #multiline.pattern: '^(\d){4}\W(\d){2}\W(\d){2}\s{1}(\d){2}\W(\d){2}\W(\d){2}\S{1}\s{1}'
-  #multiline.pattern:  '^%{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{TIME}.*'
-    multiline.pattern: '^[0-9]{4}-[0-9]{2}-[0-9]{2}'
+    #multiline.pattern:  '^%{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{TIME}.*'
+    multiline.pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}"
     # multiline.pattern: '^\[[0-9]{4}-[0-9]{2}-[0-9]{2}'
     multiline.negate: true
-    multiline.match: after    
+    multiline.match: after
     paths:
-      # - /home/spring-boot-h2-crud/*.log
-      - C:\Users\jmora\projects\spring-boot-h2-crud\*.log
+      - /home/spring-boot-h2-crud/application.log
+      - /application.log
+      - /spring-boot-h2-crud/application.log
+      
 
 #----------------------------- Logstash output --------------------------------
 output.logstash:
-  hosts: ["localhost:8089"]  
+  hosts: ["logstash:8089"]
   bulk_max_size: 1024
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications

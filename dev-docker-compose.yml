@@ -35,18 +35,30 @@ services:
     depends_on:
       - elasticsearch
 
-  # api:
-  #   build:
-  #     context: .
-  #   privileged: true
-  #   volumes:
-  #     - ~/.m2:/root/.m2
-  #     - ./:/home/spring-boot-h2-crud
-  #     - ./config/filebeat/filebeat.yml:/etc/filebeat/filebeat.yml
-  #   command: mvn spring-boot:run -DskipTests
-  #   ports:
-  #     - "8088:8088"
-  #   links:
-  #     - kibana:kibana
-  #   depends_on:
-  #     - kibana
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.11.1
+    container_name: filebeat
+    hostname: filebeat
+    volumes: 
+      - ./config/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - ./application.log:/home/spring-boot-h2-crud/application.log
+    links:
+      - elasticsearch:elasticsearch
+    depends_on:
+      - elasticsearch
+
+  api:
+    build:
+      context: .
+    privileged: true
+    volumes:
+      - ~/.m2:/root/.m2
+      - ./:/home/spring-boot-h2-crud
+      #- ./config/filebeat/filebeat.yml:/etc/filebeat/filebeat.yml
+    command: mvn spring-boot:run -DskipTests
+    ports:
+      - "8088:8088"   
+    links:
+      - filebeat:filebeat
+    depends_on:
+      - filebeat

@@ -81,7 +81,7 @@ public class SpringBootH2CRUDApplication {
 				log.info("******* Employees stored in DB :: {}", employees);
 			}
 
-			log.error("prueba", new Throwable("aja"));
+			log.error("prueba", new Throwable("Esto es una prueba"));
 		};
 	}
 

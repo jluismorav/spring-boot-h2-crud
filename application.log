@@ -1,79 +1,90 @@
-2021-03-10 16:16:20.250  INFO 61 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : Starting SpringBootH2CRUDApplication on 6b2255fde2a5 with PID 61 (/home/spring-boot-h2-crud/target/classes started by root in /home/spring-boot-h2-crud)
-2021-03-10 16:16:20.269  INFO 61 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : No active profile set, falling back to default profiles: default
-2021-03-10 16:16:24.924  INFO 61 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-10 16:16:28.051  INFO 61 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2994ms. Found 3 JPA repository interfaces.
-2021-03-10 16:16:32.020  INFO 61 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2021-03-10 16:16:32.078  INFO 61 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-03-10 16:16:32.083  INFO 61 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2021-03-10 16:16:32.933  INFO 61 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-03-10 16:16:32.935  INFO 61 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12375 ms
-2021-03-10 16:16:37.033  INFO 61 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-10 16:16:37.636  INFO 61 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-10 16:16:38.396  INFO 61 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-10 16:16:38.770  INFO 61 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
-2021-03-10 16:16:40.205  INFO 61 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-03-10 16:16:41.547  INFO 61 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-10 16:16:54.720  INFO 61 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-10 16:16:54.774  INFO 61 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-10 16:16:56.371  INFO 61 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:sampledb'
-2021-03-10 16:16:56.972  WARN 61 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-10 16:16:57.270  INFO 61 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-10 16:17:01.863  INFO 61 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-03-10 16:17:02.016  INFO 61 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2021-03-10 16:17:02.052  INFO 61 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : Started SpringBootH2CRUDApplication in 45.024 seconds (JVM running for 53.78)
-2021-03-10 16:17:03.014  INFO 61 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Students to DB *******
-2021-03-10 16:17:03.276  INFO 61 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Super heroes to DB *******
-2021-03-10 16:17:03.304  INFO 61 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Employees to DB *******
-2021-03-10 16:26:02.819  INFO 61 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-03-10 16:26:02.822  INFO 61 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-03-10 16:26:02.849  INFO 61 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
-2021-03-10 16:26:05.559  INFO 61 --- [http-nio-8088-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1660 ms
-2021-03-10 16:26:19.776  WARN 61 --- [http-nio-8088-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "9999999999999999999999999999999999999999999999999"]
-2021-03-10 16:29:18.709  INFO 61 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-10 16:29:18.724  INFO 61 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-10 16:29:18.727  INFO 61 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-10 16:29:18.757  INFO 61 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-10 16:29:18.766  INFO 61 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-10 16:29:48.146  INFO 53 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : Starting SpringBootH2CRUDApplication on 6b2255fde2a5 with PID 53 (/home/spring-boot-h2-crud/target/classes started by root in /home/spring-boot-h2-crud)
-2021-03-10 16:29:48.156  INFO 53 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : No active profile set, falling back to default profiles: default
-2021-03-10 16:29:51.794  INFO 53 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-10 16:29:52.948  INFO 53 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1114ms. Found 3 JPA repository interfaces.
-2021-03-10 16:29:55.763  INFO 53 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2021-03-10 16:29:55.816  INFO 53 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-03-10 16:29:55.818  INFO 53 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2021-03-10 16:29:56.231  INFO 53 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-03-10 16:29:56.232  INFO 53 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7851 ms
-2021-03-10 16:29:57.667  INFO 53 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-10 16:29:58.488  INFO 53 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-10 16:29:59.344  INFO 53 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-10 16:29:59.586  INFO 53 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
-2021-03-10 16:30:00.316  INFO 53 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-03-10 16:30:00.833  INFO 53 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-10 16:30:04.201  INFO 53 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-10 16:30:04.239  INFO 53 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-10 16:30:05.785  INFO 53 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:sampledb'
-2021-03-10 16:30:06.391  WARN 53 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-10 16:30:06.632  INFO 53 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-10 16:30:08.300  INFO 53 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-03-10 16:30:08.396  INFO 53 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2021-03-10 16:30:08.423  INFO 53 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : Started SpringBootH2CRUDApplication in 21.654 seconds (JVM running for 24.191)
-2021-03-10 16:30:09.058  INFO 53 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Students to DB *******
-2021-03-10 16:30:09.216  INFO 53 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Super heroes to DB *******
-2021-03-10 16:30:09.243  INFO 53 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Employees to DB *******
-2021-03-10 16:30:09.390 ERROR 53 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : Va la prueba
-
-java.lang.Throwable: Joselito Carnal!!!
-	at com.spring.crud.demo.SpringBootH2CRUDApplication.lambda$1(SpringBootH2CRUDApplication.java:85) ~[classes/:na]
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
-	at com.spring.crud.demo.SpringBootH2CRUDApplication.main(SpringBootH2CRUDApplication.java:42) ~[classes/:na]
-
-2021-03-10 18:01:37.638  WARN 53 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m3s291ms169?s700ns).
-2021-03-10 18:07:06.324  INFO 53 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-10 18:07:06.339  INFO 53 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-10 18:07:06.345  INFO 53 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-10 18:07:06.380  INFO 53 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-10 18:07:06.387  INFO 53 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-26 20:48:20.978  INFO 64 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : Starting SpringBootH2CRUDApplication on 6e580311cc81 with PID 64 (/home/spring-boot-h2-crud/target/classes started by root in /home/spring-boot-h2-crud)
+2021-03-26 20:48:21.008  INFO 64 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : No active profile set, falling back to default profiles: default
+2021-03-26 20:48:25.162  INFO 64 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-26 20:48:26.333  INFO 64 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1138ms. Found 3 JPA repository interfaces.
+2021-03-26 20:48:29.611  INFO 64 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2021-03-26 20:48:29.639  INFO 64 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-26 20:48:29.640  INFO 64 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-26 20:48:30.063  INFO 64 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-26 20:48:30.064  INFO 64 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8861 ms
+2021-03-26 20:48:30.451  INFO 64 --- [main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(health|health/.*|info|info/.*)"
+2021-03-26 20:48:30.555  INFO 64 --- [main] i.m.datadog.DatadogMeterRegistry         : An application key must be configured in order for unit information to be sent to Datadog.
+2021-03-26 20:48:30.557  INFO 64 --- [main] i.m.c.instrument.push.PushMeterRegistry  : publishing metrics for DatadogMeterRegistry every 1s
+2021-03-26 20:48:30.913  INFO 64 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-26 20:48:31.277  INFO 64 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-26 20:48:31.725  INFO 64 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-26 20:48:31.902  INFO 64 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
+2021-03-26 20:48:32.409  INFO 64 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-03-26 20:48:32.862  INFO 64 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-26 20:48:35.679  INFO 64 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-26 20:48:35.708  INFO 64 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-26 20:48:36.628  INFO 64 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:sampledb'
+2021-03-26 20:48:36.923  INFO 64 --- [main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2021-03-26 20:48:37.079  WARN 64 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-26 20:48:37.262  INFO 64 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-26 20:48:39.195  INFO 64 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-03-26 20:48:39.276  INFO 64 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2021-03-26 20:48:39.292  INFO 64 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : Started SpringBootH2CRUDApplication in 19.819 seconds (JVM running for 21.276)
+2021-03-26 20:48:39.735  INFO 64 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Students to DB *******
+2021-03-26 20:48:39.873  INFO 64 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Super heroes to DB *******
+2021-03-26 20:48:39.889  INFO 64 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Employees to DB *******
+2021-03-26 20:59:10.783  INFO 64 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-26 20:59:10.785  INFO 64 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-26 20:59:10.804  INFO 64 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2021-03-26 20:59:11.007  INFO 64 --- [http-nio-8088-exec-1] i.j.internal.reporters.LoggingReporter   : Span reported: 62f100739afd3112:62f100739afd3112:0:1 - redirect
+2021-03-26 20:59:11.423  INFO 64 --- [http-nio-8088-exec-6] i.j.internal.reporters.LoggingReporter   : Span reported: ef081f511a1746e4:ef081f511a1746e4:0:1 - openapiJson
+2021-03-26 20:59:11.428  INFO 64 --- [http-nio-8088-exec-8] i.j.internal.reporters.LoggingReporter   : Span reported: 53329cbedad774eb:53329cbedad774eb:0:1 - openapiJson
+2021-03-26 20:59:13.020  INFO 64 --- [http-nio-8088-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1540 ms
+2021-03-26 20:59:13.073  INFO 64 --- [http-nio-8088-exec-9] i.j.internal.reporters.LoggingReporter   : Span reported: fcc64cbb02bc366d:fcc64cbb02bc366d:0:1 - openapiJson
+2021-03-26 20:59:13.083  INFO 64 --- [http-nio-8088-exec-10] i.j.internal.reporters.LoggingReporter   : Span reported: 85eb963e4002098c:85eb963e4002098c:0:1 - openapiJson
+2021-03-26 20:59:19.469  INFO 64 --- [http-nio-8088-exec-1] i.j.internal.reporters.LoggingReporter   : Span reported: 8cd075d3380579c:8cd075d3380579c:0:1 - findAll
+2021-03-26 21:04:58.577  INFO 64 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-26 21:04:59.309  INFO 64 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-26 21:04:59.311  INFO 64 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-03-26 21:04:59.336  INFO 64 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-26 21:04:59.340  INFO 64 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-26 21:09:32.920  INFO 55 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : Starting SpringBootH2CRUDApplication on d78d09d19e0f with PID 55 (/home/spring-boot-h2-crud/target/classes started by root in /home/spring-boot-h2-crud)
+2021-03-26 21:09:32.931  INFO 55 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : No active profile set, falling back to default profiles: default
+2021-03-26 21:09:36.447  INFO 55 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-26 21:09:37.412  INFO 55 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 932ms. Found 3 JPA repository interfaces.
+2021-03-26 21:09:39.907  INFO 55 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2021-03-26 21:09:39.941  INFO 55 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-26 21:09:39.941  INFO 55 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-26 21:09:40.416  INFO 55 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-26 21:09:40.418  INFO 55 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7304 ms
+2021-03-26 21:09:40.900  INFO 55 --- [main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(health|health/.*|info|info/.*)"
+2021-03-26 21:09:41.033  INFO 55 --- [main] i.m.datadog.DatadogMeterRegistry         : An application key must be configured in order for unit information to be sent to Datadog.
+2021-03-26 21:09:41.037  INFO 55 --- [main] i.m.c.instrument.push.PushMeterRegistry  : publishing metrics for DatadogMeterRegistry every 1s
+2021-03-26 21:09:41.450  INFO 55 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-26 21:09:41.895  INFO 55 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-26 21:09:42.553  INFO 55 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-26 21:09:42.999  INFO 55 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
+2021-03-26 21:09:43.910  INFO 55 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-03-26 21:09:44.595  INFO 55 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-26 21:09:48.272  INFO 55 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-26 21:09:48.318  INFO 55 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-26 21:09:49.509  INFO 55 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:sampledb'
+2021-03-26 21:09:49.915  INFO 55 --- [main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2021-03-26 21:09:50.110  WARN 55 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-26 21:09:50.387  INFO 55 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-26 21:09:51.958  INFO 55 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-03-26 21:09:52.030  INFO 55 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2021-03-26 21:09:52.048  INFO 55 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : Started SpringBootH2CRUDApplication in 21.73 seconds (JVM running for 26.38)
+2021-03-26 21:09:52.888  INFO 55 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Students to DB *******
+2021-03-26 21:09:53.132  INFO 55 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Super heroes to DB *******
+2021-03-26 21:09:53.171  INFO 55 --- [main] c.s.c.demo.SpringBootH2CRUDApplication   : ******* Inserting Employees to DB *******
+2021-03-26 21:10:24.429  INFO 55 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-26 21:10:24.431  INFO 55 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-26 21:10:24.449  INFO 55 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2021-03-26 21:10:24.631  INFO 55 --- [http-nio-8088-exec-1] i.j.internal.reporters.LoggingReporter   : Span reported: 33e14ec7caeeff83:33e14ec7caeeff83:0:1 - redirect
+2021-03-26 21:11:45.603  INFO 55 --- [http-nio-8088-exec-10] i.j.internal.reporters.LoggingReporter   : Span reported: d8a8b0219c85d609:d8a8b0219c85d609:0:1 - openapiJson
+2021-03-26 21:11:45.607  INFO 55 --- [http-nio-8088-exec-2] i.j.internal.reporters.LoggingReporter   : Span reported: 86e9c4164c3cebea:86e9c4164c3cebea:0:1 - openapiJson
+2021-03-26 21:11:47.066  INFO 55 --- [http-nio-8088-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1407 ms
+2021-03-26 21:11:47.120  INFO 55 --- [http-nio-8088-exec-3] i.j.internal.reporters.LoggingReporter   : Span reported: bff74fac0ce7d0a1:bff74fac0ce7d0a1:0:1 - openapiJson
+2021-03-26 21:11:47.134  INFO 55 --- [http-nio-8088-exec-6] i.j.internal.reporters.LoggingReporter   : Span reported: 8ab645a825996d82:8ab645a825996d82:0:1 - openapiJson
+2021-03-26 21:11:53.288  INFO 55 --- [http-nio-8088-exec-7] i.j.internal.reporters.LoggingReporter   : Span reported: e7dd52991aa4d7f0:e7dd52991aa4d7f0:0:1 - findAll
+2021-03-26 21:16:24.537  INFO 55 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-26 21:16:24.688  INFO 55 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-26 21:16:24.696  INFO 55 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-03-26 21:16:24.796  INFO 55 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-26 21:16:24.817  INFO 55 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
